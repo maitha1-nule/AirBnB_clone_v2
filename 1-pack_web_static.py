@@ -7,6 +7,7 @@ clone using a function called do_pack
 from fabric.api import local
 from datetime import datetime
 
+
 def do_pack():
     """
     This function generates a .tgz archive from the contents of the web_static
