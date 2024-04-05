@@ -15,7 +15,15 @@ current_link_path="/data/web_static/current"
 
 sudo mkdir -p "$data_path" "$web_static_path" "$releases_path" "$shared_path" "$test_release_path"
 
-sudo echo -e "Fake content\n" | sudo tee "$index_html_path" > /dev/null
+{
+  echo '<html>'
+  echo '  <head>'
+  echo '  </head>'
+  echo '  <body>'
+  echo '    Holberton School'
+  echo '  </body>'
+  echo '</html>'
+} >> "$index_html_path"
 
 if [ -L "$current_link_path" ]; then
     sudo rm "$current_link_path"
